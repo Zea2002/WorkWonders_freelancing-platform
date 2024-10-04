@@ -1,0 +1,31 @@
+.service-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    height: 100%; /* Make sure all cards are the same height */
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-image {
+    height: 200px; /* Set a fixed height for the images */
+    width: 100%; /* Ensure the image covers the full width of the card */
+    object-fit: cover; /* Cover the area, maintaining aspect ratio */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Font size for the title */
+}
+
+.card-text {
+    font-size: 1rem; /* Font size for the description */
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        margin: 15px 0;
+    }
+}

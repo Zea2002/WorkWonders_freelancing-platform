@@ -1,0 +1,143 @@
+/* Global Styles */
+body {
+    background-color: #f4f6f9; 
+    font-family: 'Roboto', sans-serif; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 12px; 
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 35px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); 
+}
+
+/* Profile Image */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    margin-bottom: 15px;
+}
+
+/* Title Styles */
+h5 {
+    font-size: 1.5em; 
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Text Styles */
+.card-text {
+    color: #555;
+    margin-bottom: 15px; 
+    font-size: 1.1em; 
+}
+
+/* Button Styles */
+.details-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px; 
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.details-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); 
+}
+
+/* Project Cards */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    h5 {
+        font-size: 1.3em;
+    }
+
+    .details-button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-card {
+        padding: 15px;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    .card-text {
+        font-size: 1em;
+    }
+
+    .details-button {
+        font-size: 0.85em;
+        padding: 6px 12px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
