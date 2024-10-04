@@ -104,7 +104,7 @@ const loadUser = async () => {
                 const freelancerData = await freelancerRes.json();
                 if (freelancerData.results.length > 0) {
                     freelancerId = freelancerData.results[0]?.id;
-                    const userType = localStorage.getItem("user_type"); // Assuming user_type is stored in local storage
+                    const userType = localStorage.getItem("userType"); // Assuming user_type is stored in local storage
                     const applyNowButton = document.getElementById("apply-now");
 
                     // Show the "Apply Now" button if the user is a freelancer
