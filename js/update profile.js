@@ -1,10 +1,10 @@
 const user_name = localStorage.getItem("user_name"); // Assuming user_name is stored in localStorage
-const apiUrl = "http://127.0.0.1:8000/client/";
+const apiUrl = "https://freelancer-platform-api-17pq.onrender.com/user/";
 
 // Fetch and display user profile data
 async function fetchUserProfile() {
     try {
-        const response = await fetch(`${apiUrl}clientprofiles/${user_name}/`);
+        const response = await fetch(`${apiUrl}client/${user_name}/`);
         if (response.ok) {
             const profileData = await response.json();
             if (profileData) {
@@ -57,12 +57,12 @@ async function updateUserProfile(event) {
 
     try {
         // Check if the profile already exists
-        const response = await fetch(`${apiUrl}clientprofiles/${user_name}/`);
+        const response = await fetch(`${apiUrl}client/${user_name}/`);
         
         if (response.ok) {
             // Profile exists, use PUT method
             const profileData = await response.json();
-            const updateResponse = await fetch(`${apiUrl}clientprofiles/${profileData.id}/`, { // Update URL with profile ID
+            const updateResponse = await fetch(`${apiUrl}client/${profileData.id}/`, { // Update URL with profile ID
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ async function updateUserProfile(event) {
             }
         } else {
             // Profile does not exist, use POST method
-            const createResponse = await fetch(`${apiUrl}clientprofiles/`, {
+            const createResponse = await fetch(`${apiUrl}client/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
