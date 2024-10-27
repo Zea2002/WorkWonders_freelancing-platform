@@ -229,6 +229,8 @@ const handleProfileSubmit = async (event) => {
     }
 
     // Collect form data
+    const username = localStorage.getItem('user_name');
+    console.log('username for cretae profile:', username);
     const formData = new FormData();
     formData.append('user', username);
     formData.append('profile_pic', document.getElementById('profile_pic').files[0]);
