@@ -63,8 +63,7 @@ async function logout() {
 
         if (response.ok) {
             alert('Logout successful');
-            localStorage.removeItem('authToken');
-            localStorage.removeItem('userType'); 
+            localStorage.clear();
             window.location.reload(); 
         } else {
             const errorData = await response.json();
