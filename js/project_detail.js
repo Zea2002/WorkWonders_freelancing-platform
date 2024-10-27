@@ -131,7 +131,7 @@ const submitProposal = async (e) => {
     const proposedPrice = document.getElementById("proposed-price").value;
     const proposalData = {
         freelancer: freelancerId, // Use freelancer ID
-        project: projectId, // Use project ID
+        project:  projectTitle, // Use project ID
         about_on_project: aboutOnProject,
         proposed_price: proposedPrice,
         proposal_status: "Pending",
