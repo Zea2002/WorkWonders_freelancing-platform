@@ -16,7 +16,7 @@ const loadUserProfile = async () => {
         const client_username=userData.username;
 
         const fullName = `${userData.first_name} ${userData.last_name}`;
-        const profileResponse = await fetch(`${baseURL}/user/client/?user=${userData.username}`);
+        const profileResponse = await fetch(`${baseURL}/user/client/?user__username=${userData.username}`);
         if (!profileResponse.ok) throw new Error('Failed to fetch client profile data');
         const profileData = await profileResponse.json();
 
