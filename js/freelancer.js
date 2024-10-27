@@ -3,7 +3,8 @@ const baseURL = 'https://freelancer-platform-api-17pq.onrender.com';
 
 const loadUserProfile = async () => {
     
-    const userId = localStorage.getItem('user_id'); 
+    const userId = localStorage.getItem('user_id');
+    const username = localStorage.getItem('user_name');
 
     if (!userId) {
         console.error('User ID not found in localStorage');
@@ -22,8 +23,6 @@ const loadUserProfile = async () => {
             console.error('Username not found in user data');
             return;
         }
-
-        const username = userData.username;
         const fullName = `${userData.first_name} ${userData.last_name}`;
 
        
@@ -231,7 +230,7 @@ const handleProfileSubmit = async (event) => {
 
     // Collect form data
     const formData = new FormData();
-    formData.append('user', userId);
+    formData.append('user', username);
     formData.append('profile_pic', document.getElementById('profile_pic').files[0]);
     formData.append('portfolio_url', document.getElementById('portfolio_url').value);
     formData.append('phone', document.getElementById('phone').value);
