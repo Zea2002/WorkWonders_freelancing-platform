@@ -49,7 +49,7 @@ const loadProjectDetails = async (id) => {
 // Function to load client information using username
 const loadClientInfo = async (username) => {
     try {
-        const res = await fetch(`https://freelancer-platform-api-17pq.onrender.com/user/client/?user=${username}`);
+        const res = await fetch(`https://freelancer-platform-api-17pq.onrender.com/user/client/?user__username=${username}`);
 
         if (res.ok) {
             const clientData = await res.json();
